@@ -1,0 +1,39 @@
+pragma solidity 0.8.18;
+
+contract Operations {
+
+    uint internal adding;
+    uint internal subtracting;
+    uint internal dividing;
+    uint internal multiplying;
+
+    function numbers(uint num1, uint num2) public
+    {
+        adding = num1 + num2;
+        subtracting = num1 - num2;
+        multiplying = num1 * num2;
+        dividing = num1 / num2;
+    }
+
+    function add() public view returns (uint)
+    {
+        return adding;
+    }
+
+    function subtract() public view returns (uint)
+    {
+        return subtracting;
+    }
+
+    function divide() public view returns (uint)
+    {
+        return dividing;
+    }
+
+    function multiply() public view returns (uint)
+    {
+        return multiplying;
+    }
+
+    
+}
