@@ -1,0 +1,24 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.18;
+
+contract ConditionalStatement 
+{
+    //1202 gas cost - bit more expensive when using if-else 
+    function GiveInput(uint num1, uint num2) public pure returns (string memory)
+    {
+        if(num1 > num2)
+        {
+            return "num1 is greater than num2";
+        }
+        else
+        {
+            return "num2 is greater than num1";
+        }
+    }
+
+    //1187 gas cost - bit cheap when using ternary operator/conditional operator.
+    function UseShortCut(uint num1, uint num2) public pure returns (string memory)
+    {
+        return num1 > num2? "num1 is greater than num2": "num2 is greater than num1";
+    }
+}
