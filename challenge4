@@ -18,7 +18,7 @@ contract Operations {
 
     function add() public view returns (uint)
     {
-        return adding;  // Return the value stored in adding variable
+        return adding;  // Return the value stored in adding variable.
     }
 
     function subtract() public view returns (uint)
