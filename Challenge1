@@ -1,0 +1,42 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.18;
+
+contract multipleStorage{
+    int intiger;
+    uint uIntiger;
+    bool trueFalse;
+    string String;
+
+    function setIntiger(int _intiger) public {
+        intiger = _intiger;
+    }
+
+    function getIntiger() public view returns (int) {
+        return intiger;
+    }
+
+    function setUIntiger(uint _uIntiger) public {
+        uIntiger = _uIntiger;
+    }
+
+    function getUIntiger() public view returns (uint) {
+        return uIntiger;
+    }
+
+    function setBool(bool _trueFalse) public {
+        trueFalse = _trueFalse;
+    }
+
+    function getBool() public view returns(bool) {
+        return trueFalse;
+    }
+
+    function setWord(string memory _String) public {
+        String = _String;
+    }
+
+    function getWord() public view returns(string memory){
+        return String;
+    }
+    
+}
