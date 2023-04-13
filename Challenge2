@@ -1,0 +1,28 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.18; 
+
+contract unitConversion{
+    
+    int private Gwei;
+    int private Wei;
+    int private Ethereum;
+
+    function yourEther(int Ether) public {
+        Gwei = Ether*1000000000;
+        Wei = Ether*1000000000000000000;
+        Ethereum = Ether*1;
+    }
+
+    function inEther() public view returns (int) {
+        return Ethereum;
+    }
+
+    function inGwei() public view returns (int) {
+        return Gwei;
+    }
+
+     function inWei() public view returns (int) {
+        return Wei;
+    }
+
+}
